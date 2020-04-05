@@ -1,0 +1,22 @@
+{
+  "name": "travel-planner",
+  "version": "1.0.1",
+  "description": "Travel app",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muhammedkhairy/travel-planner.git"
+  },
+  "keywords": [
+    "travel",
+    "planner",
+    "trip",
+    "location"
+  ],
+  "author": "Mohammed M. Mostafa",
+  "license": "ISC",
+  "homepage": "https://github.com/muhammedkhairy/travel-planner#readme"
+}
