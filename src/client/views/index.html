@@ -3,9 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travel Planner</title>
+  <link rel="stylesheet" href="../converted/main.css">
+  <link rel="stylesheet" href="../converted/resets.css">
+  <link rel="stylesheet" href="../converted/header.css">
+  <title>Travel App</title>
 </head>
 <body>
-  <h1 class="header">Travel Planner</h1>
+  <header class="page_header">
+    <nav>
+      <div class="logo">
+        <img src="../media/travel.svg" alt="logo">
+        <h2>Unleash World</h2>
+      </div>
+      <ul class="links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Trips</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+      <div class="dashes">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="grid">
+    <section class="splash_screen" id="section1">
+      <div class="video">
+        <video autoplay muted controlsList="nodownload" loop>
+          <source src="../media/splash_video.mp4">
+        </video>
+      </div>
+      <h1>Travel</h1>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione ab itaque corrupti necessitatibus quis perferendis eligendi fuga voluptates voluptas soluta!</p>
+      <a href="#" class="btn">Choose your Trip</a>
+    </section>
+
+    <section class="intro" id="section2">
+      <h1>Unleash your Life</h1>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At sunt minus quisquam asperiores maiores. Cum, corporis inventore. Sint libero, nemo magni aspernatur laborum tenetur nisi exercitationem laudantium beatae! Commodi, non.</p>
+    </section>
+
+    <section class="search" id="section3">
+      <div class="container">
+        <h2>Search your Trip</h2>
+        <img src="../media/travel.jpg" alt="travel">
+        <form>
+          <label for="destination">Your destination:</label>
+          <input type="text" name="destination" id="destination" placeholder="Enter your destination"></br>
+          <label for="destination">Date:</label>
+          <input type="date" name="date" id="date" min ="2020-01-01" max="2050-01-01"></br>
+          <input type="submit" value="search" class="btn">
+        </form>
+      </div>
+    </section>
+
+    <section class="results" id="results">
+      <div class="container">
+        <h2>Your trip results</h2>
+        <img src="https://picsum.photos/200" alt="your_destination" class="destination">
+        <input type="button" value="Check your destination" class="btn">
+        <div class="flex">
+          <p>You are going to:</p>
+          <p>you are away from</p>
+          <p>the weather will be</p>
+          <input type="button" value="Add trip" class="btn">
+          <input type="button" value="Delete trip" class="btn">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur eos nesciunt tempora animi reiciendis nostrum id commodi? Ab, aut quibusdam obcaecati eum inventore excepturi atque.</p>
+  </footer>
+
+  <script src="../js/nav_animation.js"></script>
 </body>
 </html>

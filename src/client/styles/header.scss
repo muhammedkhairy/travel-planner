@@ -1,0 +1,198 @@
+
+
+//larger than 992 px (medium devices)
+@import url('resets.scss');
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@700&display=swap');
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background-color: #5d4954;
+  font-family: 'Baloo Paaji 2', cursive;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+
+  .logo {
+    display: flex;
+    img {
+      width: 100%;
+      width: 50px;
+      margin: 0;
+    }
+    h2 {
+      color: var(--primary);
+      margin: auto;
+      margin-left: 1.2rem;
+      letter-spacing: 0.3rem;
+    }
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-around;
+    width: 55%;
+    
+    li {
+      list-style: none;
+      position: relative;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      letter-spacing: 0.15rem;
+      font-size: 1.2rem;
+
+      &:hover {
+        color: var(--light);
+
+        &::before {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 2px;
+          background-color: var(--light);
+          top:0;
+          position: absolute;
+        }
+        &::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 2px;
+          background-color: var(--light);
+          bottom:0;
+          position: absolute;
+        }
+      }
+    }
+  }
+
+  .dashes {
+    display: none;
+    cursor: pointer;
+    div{
+      background-color: var(--primary);
+      width: 25px;
+      height: 3px;
+      margin: 5px;
+    }
+  }
+}
+
+
+
+/*Quires*/
+//smaller than or equal to 768 px (smartphones)
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  nav {
+    min-height: 10vh;
+    justify-content: space-around;
+
+    .logo {
+      img {
+        width: 100%;
+        width: 35px;
+        margin: 0;
+      }
+      h2 {
+        font-size: 1.5rem;
+        color: var(--primary);
+        margin: auto;
+        margin-left: 1.0rem;
+        letter-spacing: 0.15rem;
+      }
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #5d4954;
+      width: 40%;
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      right: 0px;
+      height: 90vh;
+      top: 10vh;
+      z-index: 1;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+  
+      a {
+        color: var(--primary);
+        text-decoration: none;
+        letter-spacing: 0.15rem;
+        font-size: 0.9rem;
+      }
+
+      li {
+        opacity: 0;
+      }
+    }
+
+    .dashes {
+      display: block;
+    }
+  }
+}
+
+.nav__active {
+  transform: translateX(0%) !important;
+}
+
+@keyframes navLinks {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.dashes__animate {
+  .line1 {
+    transform: rotate(-45deg) translate(-5px,6px);
+  }
+  .line2 {
+    opacity: 0;
+  }
+  .line3 {
+    transform: rotate(45deg) translate(-5px,-6px);
+  }
+}
+
+//larger than 768 px (small devices, tablets)
+@media screen and (min-width: 768px) and (max-width: 992px){
+  nav {
+    font-size: 1rem;
+    .logo {
+      img {
+        width: 100%;
+        width: 40px;
+        margin: 0;
+      }
+      h2 {
+        color: var(--primary);
+        margin: auto;
+        margin-left: 1.2rem;
+        letter-spacing: 0.3rem;
+      }
+    }
+    .links {
+      a {
+        font-size: 0.95rem;
+    }
+    }
+  }
+}

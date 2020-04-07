@@ -2,8 +2,9 @@
   "name": "travel-planner",
   "version": "1.0.1",
   "description": "Travel app",
-  "main": "server.js",
+  "main": "src/server/server.js",
   "scripts": {
+    "watch": "nodemon",
     "test": "jest",
     "start": "node src/server/server.js",
     "build-dev": "webpack --config webpack.dev.js --open",
@@ -30,7 +31,9 @@
   },
   "devDependencies": {
     "jest": "^25.2.7",
+    "nodemon": "^2.0.2",
     "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   }
 }

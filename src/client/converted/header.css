@@ -1,0 +1,221 @@
+@import url("resets.scss");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@700&display=swap");
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 10vh;
+  background-color: #5d4954;
+  font-family: 'Baloo Paaji 2', cursive;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+nav .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav .logo img {
+  width: 100%;
+  width: 50px;
+  margin: 0;
+}
+
+nav .logo h2 {
+  color: var(--primary);
+  margin: auto;
+  margin-left: 1.2rem;
+  letter-spacing: 0.3rem;
+}
+
+nav .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 55%;
+}
+
+nav .links li {
+  list-style: none;
+  position: relative;
+}
+
+nav .links a {
+  color: var(--primary);
+  text-decoration: none;
+  letter-spacing: 0.15rem;
+  font-size: 1.2rem;
+}
+
+nav .links a:hover {
+  color: var(--light);
+}
+
+nav .links a:hover::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--light);
+  top: 0;
+  position: absolute;
+}
+
+nav .links a:hover::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--light);
+  bottom: 0;
+  position: absolute;
+}
+
+nav .dashes {
+  display: none;
+  cursor: pointer;
+}
+
+nav .dashes div {
+  background-color: var(--primary);
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+}
+
+/*Quires*/
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  nav {
+    min-height: 10vh;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  nav .logo img {
+    width: 100%;
+    width: 35px;
+    margin: 0;
+  }
+  nav .logo h2 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin: auto;
+    margin-left: 1.0rem;
+    letter-spacing: 0.15rem;
+  }
+  nav .links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #5d4954;
+    width: 40%;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    right: 0px;
+    height: 90vh;
+    top: 10vh;
+    z-index: 1;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform 0.5s ease-in;
+    transition: -webkit-transform 0.5s ease-in;
+    transition: transform 0.5s ease-in;
+    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  }
+  nav .links a {
+    color: var(--primary);
+    text-decoration: none;
+    letter-spacing: 0.15rem;
+    font-size: 0.9rem;
+  }
+  nav .links li {
+    opacity: 0;
+  }
+  nav .dashes {
+    display: block;
+  }
+}
+
+.nav__active {
+  -webkit-transform: translateX(0%) !important;
+          transform: translateX(0%) !important;
+}
+
+@-webkit-keyframes navLinks {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes navLinks {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+.dashes__animate .line1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+          transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.dashes__animate .line2 {
+  opacity: 0;
+}
+
+.dashes__animate .line3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -6px);
+          transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  nav {
+    font-size: 1rem;
+  }
+  nav .logo img {
+    width: 100%;
+    width: 40px;
+    margin: 0;
+  }
+  nav .logo h2 {
+    color: var(--primary);
+    margin: auto;
+    margin-left: 1.2rem;
+    letter-spacing: 0.3rem;
+  }
+  nav .links a {
+    font-size: 0.95rem;
+  }
+}
