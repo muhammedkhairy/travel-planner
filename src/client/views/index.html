@@ -3,9 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../converted/main.css">
+  <link rel="stylesheet" href="../converted/video.css">
   <link rel="stylesheet" href="../converted/resets.css">
   <link rel="stylesheet" href="../converted/header.css">
+  <link rel="stylesheet" href="../converted/search.css">
+  <link rel="stylesheet" href="../converted/results.css">
+  <link rel="stylesheet" href="../converted/info-about.css">
+  <link rel="stylesheet" href="../converted/footer.css">
   <title>Travel App</title>
 </head>
 <body>
@@ -17,8 +21,8 @@
       </div>
       <ul class="links">
         <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
         <li><a href="#">Trips</a></li>
+        <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
 
@@ -31,54 +35,70 @@
   </header>
 
   <main class="grid">
-    <section class="splash_screen" id="section1">
-      <div class="video">
+    <section class="splash__screen video__container" id="section1">
+      <div class="video__content">
         <video autoplay muted controlsList="nodownload" loop>
           <source src="../media/splash_video.mp4">
         </video>
       </div>
-      <h1>Travel</h1>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione ab itaque corrupti necessitatibus quis perferendis eligendi fuga voluptates voluptas soluta!</p>
-      <a href="#" class="btn">Choose your Trip</a>
+      <div class="header__overlay"></div>
+      <div class="header__content">
+        <h1>Unleash the world</h1>
+        <p>“Twenty years from now you will be more disappointed by the things you didn’t do than by the ones you did do. So throw off the bowlines. Catch the trade winds in your sails. <span>Explore. Dream. Discover.</span>” --Mark Twain</p>
+        <a href="#" class="btn">Choose your Trip</a>
+    </div>
     </section>
 
-    <section class="intro" id="section2">
-      <h1>Unleash your Life</h1>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At sunt minus quisquam asperiores maiores. Cum, corporis inventore. Sint libero, nemo magni aspernatur laborum tenetur nisi exercitationem laudantium beatae! Commodi, non.</p>
-    </section>
-
-    <section class="search" id="section3">
-      <div class="container">
+    <section class="search__trips" id="section3">
+      <div class="search__container">
         <h2>Search your Trip</h2>
-        <img src="../media/travel.jpg" alt="travel">
-        <form>
-          <label for="destination">Your destination:</label>
-          <input type="text" name="destination" id="destination" placeholder="Enter your destination"></br>
-          <label for="destination">Date:</label>
-          <input type="date" name="date" id="date" min ="2020-01-01" max="2050-01-01"></br>
-          <input type="submit" value="search" class="btn">
-        </form>
-      </div>
-    </section>
-
-    <section class="results" id="results">
-      <div class="container">
-        <h2>Your trip results</h2>
-        <img src="https://picsum.photos/200" alt="your_destination" class="destination">
-        <input type="button" value="Check your destination" class="btn">
-        <div class="flex">
-          <p>You are going to:</p>
-          <p>you are away from</p>
-          <p>the weather will be</p>
-          <input type="button" value="Add trip" class="btn">
-          <input type="button" value="Delete trip" class="btn">
+        <div class="search">
+          <img src="../media/travel.jpg" alt="travel">
+          <form>
+            <label for="destination">Your destination:</label>
+            <input type="text" name="destination" id="destination" placeholder="Enter your destination..." autofocus></br>
+            <label for="destination">Date:</label>
+            <input type="date" name="date" id="date" min ="2020-01-01" max="2050-01-01"></br>
+            <input type="submit" value="search" class="btn">
+          </form>
         </div>
       </div>
+    </section> 
+    
+    <section class="search__results" id="results">
+      <div class="results__container">
+        <h2>Your trip results</h2>
+        <div class="result">
+          <div class="info__photo">
+            <img src="https://images.pexels.com/photos/3922749/pexels-photo-3922749.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="your_destination" class="destination">
+            <a class="btn">Check your destination</a>
+          </div>
+          <div class="result__data">
+            <p class="bold">You are going to:<span> Paris, France</span></p>
+            <p class="bold">you are departing in:</p>
+            <input type="button" value="Save trip" class="btn">
+            <input type="button" value="Delete trip" class="btn btn-last">
+            <p>your destination is ....... away from today </p>
+            <p>Typical weather for this time is: </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="info__about" id="section2">
+      <h1>About Us</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam esse voluptates magnam debitis dolore, ad beatae, velit repellat optio, saepe blanditiis. Inventore provident dolorem aut minus molestias impedit ipsa aspernatur eligendi nostrum exercitationem eum architecto, pariatur voluptatibus, consequuntur itaque voluptatum a, in sapiente quisquam rem! Animi incidunt dicta laudantium culpa?</p>
     </section>
   </main>
 
   <footer>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur eos nesciunt tempora animi reiciendis nostrum id commodi? Ab, aut quibusdam obcaecati eum inventore excepturi atque.</p>
+    <hr>
+    <div class="container">
+      <!--<p>This is a footer</p>-->
+      <a href="https://github.com" target="_blank"><img src="../media/GitHub.png" alt="Github" class="github"></a>
+      <a href = "https://facebook.com" target="_blank"><img src="../media/Facebook.png" alt="facebook" class="facebook"></a>
+      <a href="https://twitter.com" target="_blank"><img src="../media/Twitter.png" alt="twitter" class="twitter"></a>
+    </div>
   </footer>
 
   <script src="../js/nav_animation.js"></script>

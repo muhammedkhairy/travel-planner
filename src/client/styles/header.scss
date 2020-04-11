@@ -1,19 +1,20 @@
-
-
-//larger than 992 px (medium devices)
 @import url('resets.scss');
 
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@700&display=swap');
 
 nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   min-height: 10vh;
-  background-color: #5d4954;
+  background-color: #60061E;
   font-family: 'Baloo Paaji 2', cursive;
   font-size: 1.3rem;
   text-transform: uppercase;
+  z-index: 100;
 
   .logo {
     display: flex;
@@ -115,7 +116,7 @@ nav {
       display: flex;
       flex-direction: column;
       align-items: center;
-      background-color: #5d4954;
+      background-color: #60061E;
       width: 40%;
       position: absolute;
       margin: 0;
@@ -123,7 +124,7 @@ nav {
       right: 0px;
       height: 90vh;
       top: 10vh;
-      z-index: 1;
+      z-index: 100;
       transform: translateX(100%);
       transition: transform 0.5s ease-in;
   

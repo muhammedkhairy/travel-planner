@@ -1,7 +1,13 @@
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+hr {
+  margin: 0;
+  margin-bottom: 2vh;
+  border: 0;
+  height: 2px;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(#60061E), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #60061E, rgba(0, 0, 0, 0));
+}
+
+footer {
   text-align: center;
+  font-family: 'Boogaloo', cursive;
 }
