@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../converted/video.css">
-  <link rel="stylesheet" href="../converted/resets.css">
-  <link rel="stylesheet" href="../converted/header.css">
-  <link rel="stylesheet" href="../converted/search.css">
-  <link rel="stylesheet" href="../converted/results.css">
-  <link rel="stylesheet" href="../converted/info-about.css">
-  <link rel="stylesheet" href="../converted/footer.css">
   <title>Travel App</title>
 </head>
+
 <body>
   <header class="page_header">
     <nav>
@@ -44,9 +39,11 @@
       <div class="header__overlay"></div>
       <div class="header__content">
         <h1>Unleash the world</h1>
-        <p>“Twenty years from now you will be more disappointed by the things you didn’t do than by the ones you did do. So throw off the bowlines. Catch the trade winds in your sails. <span>Explore. Dream. Discover.</span>” --Mark Twain</p>
+        <p>“Twenty years from now you will be more disappointed by the things you didn’t do than by the ones you did do.
+          So throw off the bowlines. Catch the trade winds in your sails. <span>Explore. Dream. Discover.</span>” --Mark
+          Twain</p>
         <a href="#" class="btn">Choose your Trip</a>
-    </div>
+      </div>
     </section>
 
     <section class="search__trips" id="section3">
@@ -56,21 +53,24 @@
           <img src="../media/travel.jpg" alt="travel">
           <form>
             <label for="destination">Your destination:</label>
-            <input type="text" name="destination" id="destination" placeholder="Enter your destination..." autofocus></br>
+            <input type="text" name="destination" id="destination" placeholder="Enter your destination..."
+              autofocus></br>
             <label for="destination">Date:</label>
-            <input type="date" name="date" id="date" min ="2020-01-01" max="2050-01-01"></br>
+            <input type="date" name="date" id="date" min="2020-01-01" max="2050-01-01"></br>
             <input type="submit" value="search" class="btn">
           </form>
         </div>
       </div>
-    </section> 
-    
+    </section>
+
     <section class="search__results" id="results">
       <div class="results__container">
         <h2>Your trip results</h2>
         <div class="result">
           <div class="info__photo">
-            <img src="https://images.pexels.com/photos/3922749/pexels-photo-3922749.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="your_destination" class="destination">
+            <img
+              src="https://images.pexels.com/photos/3922749/pexels-photo-3922749.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              alt="your_destination" class="destination">
             <a class="btn">Check your destination</a>
           </div>
           <div class="result__data">
@@ -87,7 +87,10 @@
 
     <section class="info__about" id="section2">
       <h1>About Us</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam esse voluptates magnam debitis dolore, ad beatae, velit repellat optio, saepe blanditiis. Inventore provident dolorem aut minus molestias impedit ipsa aspernatur eligendi nostrum exercitationem eum architecto, pariatur voluptatibus, consequuntur itaque voluptatum a, in sapiente quisquam rem! Animi incidunt dicta laudantium culpa?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam esse voluptates magnam debitis dolore, ad beatae,
+        velit repellat optio, saepe blanditiis. Inventore provident dolorem aut minus molestias impedit ipsa aspernatur
+        eligendi nostrum exercitationem eum architecto, pariatur voluptatibus, consequuntur itaque voluptatum a, in
+        sapiente quisquam rem! Animi incidunt dicta laudantium culpa?</p>
     </section>
   </main>
 
@@ -95,12 +98,20 @@
     <hr>
     <div class="container">
       <!--<p>This is a footer</p>-->
-      <a href="https://github.com/muhammedkhairy/travel-planner" target="_blank"><img src="../media/GitHub.png" alt="Github" class="github"></a>
-      <a href = "https://facebook.com" target="_blank"><img src="../media/Facebook.png" alt="facebook" class="facebook"></a>
+      <a href="https://github.com/muhammedkhairy/travel-planner" target="_blank"><img src="../media/GitHub.png"
+          alt="Github" class="github"></a>
+      <a href="https://facebook.com" target="_blank"><img src="../media/Facebook.png" alt="facebook"
+          class="facebook"></a>
       <a href="https://twitter.com" target="_blank"><img src="../media/Twitter.png" alt="twitter" class="twitter"></a>
     </div>
   </footer>
-
-  <script src="../js/nav_animation.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js');
+      });
+    }
+  </script>
 </body>
+
 </html>
