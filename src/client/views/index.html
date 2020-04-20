@@ -15,10 +15,10 @@
         <h2>Unleash World</h2>
       </div>
       <ul class="links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Trips</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a>Home</a></li>
+        <li><a>Trips</a></li>
+        <li><a>About</a></li>
+        <li><a>Contact</a></li>
       </ul>
 
       <div class="dashes">
@@ -30,7 +30,7 @@
   </header>
 
   <main class="grid">
-    <section class="splash__screen video__container" id="section1">
+    <section class="splash__screen video__container" id="home">
       <div class="video__content">
         <video autoplay muted controlsList="nodownload" loop>
           <source src="../media/splash_video.mp4">
@@ -42,14 +42,14 @@
         <p>“Twenty years from now you will be more disappointed by the things you didn’t do than by the ones you did do.
           So throw off the bowlines. Catch the trade winds in your sails. <span>Explore. Dream. Discover.</span>” --Mark
           Twain</p>
-        <a href="#" class="btn">Choose your Trip</a>
+        <a href="#trips_search" class="btn">Choose your Trip</a>
       </div>
     </section>
 
-    <section class="search__trips" id="section3">
+    <section class="search__trips" id="trips_search">
       <div class="search__container">
         <h2>Search your Trip</h2>
-        <div class="search">
+        <div class="search" id="home">
           <img src="../media/travel.jpg" alt="travel">
           <form>
             <label for="destination">Your destination:</label>
@@ -57,13 +57,13 @@
               autofocus></br>
             <label for="destination">Date:</label>
             <input type="date" name="date" id="date" min="2020-01-01" max="2050-01-01"></br>
-            <input type="submit" value="search" class="btn">
+            <input type="submit" value="search" id="search" class="btn">
           </form>
         </div>
       </div>
     </section>
 
-    <section class="search__results" id="results">
+    <section class="search__results">
       <div class="results__container">
         <h2>Your trip results</h2>
         <div class="result">
@@ -85,7 +85,7 @@
       </div>
     </section>
 
-    <section class="info__about" id="section2">
+    <section class="info__about" id="about">
       <h1>About Us</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam esse voluptates magnam debitis dolore, ad beatae,
         velit repellat optio, saepe blanditiis. Inventore provident dolorem aut minus molestias impedit ipsa aspernatur
@@ -108,7 +108,7 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js');
+        navigator.serviceWorker.register('./service-worker.js');
       });
     }
   </script>

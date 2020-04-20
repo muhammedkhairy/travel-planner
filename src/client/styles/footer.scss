@@ -3,10 +3,24 @@ hr {
   margin-bottom: 2vh;
   border: 0;
   height: 2px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0),#60061E, rgba(0, 0, 0, 0));
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    #60061e,
+    rgba(0, 0, 0, 0)
+  );
 }
 
 footer {
   text-align: center;
   font-family: 'Boogaloo', cursive;
+
+  .container {
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    width: 150px;
+    align-items: center;
+    justify-content: space-between;
+  }
 }

@@ -1,13 +1,15 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const {
-  CleanWebpackPlugin
-} = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: './src/client/index.js',
+  performance: {
+    hints: false,
+  },
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.js?$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
@@ -19,14 +21,16 @@ module.exports = {
       },
 
       {
-        test: /\.(mp4|png|svg|jpg|gif)$/,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]',
-            outputPath: 'media',
+        test: /\.(mp4|png|svg|jpg|gif|ico)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'media',
+            },
           },
-        }, ],
+        ],
       },
 
       {
@@ -40,6 +44,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src/client/views/index.html'),
       filename: './index.html',
+      favicon: 'src/client/media/favicon.ico',
     }),
   ],
 };

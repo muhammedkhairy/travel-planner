@@ -6,7 +6,7 @@
 .results__container {
   display: none;
   background-color: #ebc7c7;
-  width :85vw;
+  width: 85vw;
   height: auto;
   margin: auto;
   margin-top: 15vh;
@@ -15,30 +15,28 @@
   h2 {
     font-size: 2.2rem;
     font-family: 'Carter One', cursive;
-    color: #60061E;
+    color: #60061e;
     text-align: center;
     margin: 0;
     margin-right: auto;
     margin-left: auto;
     padding: 0.5rem 1rem;
     transform: translateY(-50%);
-    background: #FB1;
-    border: 3px solid #60061E;
+    background: #fb1;
+    border: 3px solid #60061e;
     border-radius: 40px;
-    width: fit-content;
-    box-shadow:
-        inset 0 0 2px 0 rgba(255,255,255,.4),
-        inset 0 0 3px 0 rgba(0,0,0,.4),
-        inset 0 0 3px 5px rgba(0,0,0,.05),
-        2px 2px 4px 0 rgba(0,0,0,.25);
+    width: max-content;
+    box-shadow: inset 0 0 2px 0 rgba(255, 255, 255, 0.4),
+      inset 0 0 3px 0 rgba(0, 0, 0, 0.4), inset 0 0 3px 5px rgba(0, 0, 0, 0.05),
+      2px 2px 4px 0 rgba(0, 0, 0, 0.25);
   }
 
   .result {
     display: flex;
     align-items: center;
-  
+
     .info__photo {
-      width:30vw;
+      width: 30vw;
       position: relative;
       display: flex;
       flex-direction: column;
@@ -48,15 +46,15 @@
       margin-bottom: 5vh;
       margin-left: 1rem;
       margin-right: 3rem;
-  
+
       img {
         width: 100%;
         width: 30vw;
         height: 60vh;
         margin: auto;
-        box-shadow: 5px 5px 15px 0 rgba(0,0,0,.25);
+        box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.25);
       }
-  
+
       a {
         position: absolute;
         bottom: 0;
@@ -78,7 +76,7 @@
       font-weight: lighter;
 
       span {
-        color: #60061E;
+        color: #60061e;
         font-style: italic;
         font-size: 1.7rem;
         font-weight: 900;
@@ -90,108 +88,106 @@
       font-size: 1.8rem;
     }
 
-    input[type=button] {
+    input[type='button'] {
       //background: var(--dark);
       margin-right: 2.5vw;
       padding: 0.6rem 3rem;
       font-family: 'Patrick Hand', cursive;
       font-size: 1.3rem;
       font-weight: bold;
-      color: #FB1;
+      color: #fb1;
       cursor: pointer;
     }
   }
 }
 
-
 /* small screens*/
 @media screen and (max-width: 768px) {
   .results__container {
-    width :100vw;
-  
+    width: 100vw;
+
     h2 {
       font-size: 1.7rem;
     }
-  
+
     .result {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       margin-top: -5vh;
       justify-content: space-around;
-    
+
       .info__photo {
         width: 100vw;
         margin-top: 2vh;
         margin-left: auto;
         margin-right: auto;
-    
+
         img {
           width: 80vh;
           height: 50vh;
         }
       }
     }
-  
+
     .result__data {
       margin-top: -5vh;
       margin-right: 1rem;
       margin-left: 1rem;
+
       p {
         font-size: 1.1rem;
-  
+
         span {
           font-size: 1.5rem;
         }
       }
-  
+
       .bold {
         font-size: 1.2rem;
       }
-  
-      input[type=button] {
+
+      input[type='button'] {
         font-size: 1.1rem;
       }
     }
   }
 }
 
-
 /*medium screens*/
-@media screen and (min-width: 768px) and (max-width: 992px){
+@media screen and (min-width: 768px) and (max-width: 992px) {
   .results__container {
-    width :90vw;
-  
+    width: 90vw;
+
     h2 {
       font-size: 1.85rem;
     }
-  
+
     .result {
       display: flex;
       align-items: center;
-    
+
       .info__photo {
-            
         a {
           font-size: 1.3rem;
         }
       }
     }
-  
+
     .result__data {
       p {
         font-size: 1.4rem;
-  
+
         span {
           font-size: 1.6rem;
         }
       }
-  
+
       .bold {
         font-size: 1.5rem;
       }
-  
-      input[type=button] {
+
+      input[type='button'] {
         font-size: 1.2rem;
       }
     }
