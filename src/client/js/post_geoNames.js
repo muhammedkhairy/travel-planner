@@ -10,7 +10,7 @@ const postData = async (url = '', data = {}) => {
   });
   try {
     const extractedData = await response.json();
-    //console.log(extractedData);
+    console.log(extractedData);
     return extractedData;
   } catch (error) {
     console.error(error);

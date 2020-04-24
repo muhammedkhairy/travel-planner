@@ -3,8 +3,21 @@ const exposeWeatherIoForecast = async (url) => {
   const response = await fetch(url);
   try {
     const weatherForecast = await response.json();
-    console.log(weatherForecast.data[0]);
-    return weatherForecast.data[0]
+    const tripDate = new Date(document.getElementById('date').value);
+    const lastDayForecast =weatherForecast.data[15].datetime;
+    const dayData = weatherForecast.data.find(day => {
+      if (Date.parse(day.datetime) == Date.parse(tripDate)){
+        return Date.parse(day.datetime);
+      }
+    })
+    //console.log (dayData);
+    if (Date.parse(lastDayForecast) < Date.parse(tripDate)){
+      return (weatherForecast.data[15]);
+    } else {
+      return dayData;
+    }
+
+    //return dayData;
   } catch (error) {
     console.error(error);
   }

@@ -69,11 +69,21 @@
   }
 
   .result__data {
+
+    .weather_data {
+      margin: 0 auto;
+      font-size: 1.3rem;
+      font-family: 'Righteous', cursive;
+      font-style: italic;
+      color: #60061e;
+    }
+
     p {
       color: var(--dark);
       font-size: 1.5rem;
       font-family: 'Righteous', cursive;
       font-weight: lighter;
+      margin-bottom: 10px;
 
       span {
         color: #60061e;
@@ -135,6 +145,10 @@
       margin-right: 1rem;
       margin-left: 1rem;
 
+      .weather_data {
+        font-size: 1rem;
+      }
+
       p {
         font-size: 1.1rem;
 
@@ -175,6 +189,10 @@
     }
 
     .result__data {
+
+      .weather_data {
+        font-size: 1.2rem;
+      }
       p {
         font-size: 1.4rem;
 

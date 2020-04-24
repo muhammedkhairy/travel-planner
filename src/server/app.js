@@ -1,5 +1,6 @@
 weatherData = {}; // to hold geoNames data
-weatherInfo = {} // to hold info from weather bit
+weatherInfo = {}; // to hold info from weather bit
+pixabayLink = {}; //hold info from pixabay
 
 const express = require('express');
 const path = require('path');
@@ -20,7 +21,7 @@ app.get('/', (request, response) => {
 });
 
 app.post('/geoNamesData', (request, response) => {
-  weatherData['date'] = new Date();
+  weatherData['cityName'] = request.body.cityName;
   weatherData['countryName'] = request.body.countryName;
   weatherData['latitude'] = request.body.latitude;
   weatherData['longitude'] = request.body.longitude;
@@ -29,16 +30,13 @@ app.post('/geoNamesData', (request, response) => {
   //return weatherData;
 });
 
-app.get('/weatherURL', (request, respond) => {
+app.get('/weatherURL', (request, response) => {
   const url_forecast = 'https://api.weatherbit.io/v2.0/forecast/daily';
   const lat = `lat=${weatherData.latitude}`;
   const long = `lon=${weatherData.longitude}`;
   const url = `${url_forecast}?${lat}&${long}&key=${process.env.API_WEATHER_KEY}`;
-  console.log(url);
-
-  respond.send(url);
+  response.send(url);
 });
-
 
 app.post('/weatherbit', (request, response) => {
   weatherInfo['date'] = request.body.date;
@@ -47,6 +45,25 @@ app.post('/weatherbit', (request, response) => {
   weatherInfo['weather'] = request.body.weather;
   response.send(weatherInfo);
   //console.log(weatherInfo)
+});
+
+app.get('/pixabayURL', (request, response) => {
+  const url_image = 'https://pixabay.com/api/?key=';
+  const parameters = '&image_type=photo&category=travel&safesearch=true';
+  const city = `&q=${weatherData.cityName}`;
+  const pixabayURL = `${url_image}${process.env.PIXABAY_KEY}${city}${parameters}`;
+  response.send(pixabayURL);
+});
+
+app.post('/pixabay', (request, response) => {
+  //pixabayLink['date'] = new Date();
+  pixabayLink['imageURL'] = request.body.imageURL;
+  response.send(pixabayLink);
+  //console.log(weatherInfo)
+});
+
+app.get('/all', (request, response) => {
+  response.send({ weatherData, weatherInfo, pixabayLink });
 });
 
 module.exports = app;

@@ -5,6 +5,10 @@ import getWeatherIoURL from './weatherbit_url';
 import postData from './post_geoNames';
 import exposeWeatherIoForecast from './weatherbit_data';
 import weatherBitData from './Post_weatherbit';
+import getPixabayURL from './PixabayURL';
+import exposePixabayData from './pixabayData';
+import pixabayData from './post_pixabay';
+import userInterface from './userInterface';
 
 export function main() {
   document.getElementById('search').addEventListener('click', (event) => {
@@ -18,7 +22,7 @@ export function main() {
       geoNamesData(baseURL, destination, API_Credentials).then((data) => {
         //console.log(data);
         postData('/geoNamesData', {
-          date: new Date(),
+          cityName: data.name,
           countryName: data.countryName,
           latitude: data.lat,
           longitude: data.lng,
@@ -26,15 +30,23 @@ export function main() {
       });
       getWeatherIoURL('/weatherURL').then((data) => {
         //console.log(data);
-        exposeWeatherIoForecast(data).then(data => {
-          weatherBitData('/weatherbit',{
+        exposeWeatherIoForecast(data).then((data) => {
+          weatherBitData('/weatherbit', {
             date: data.datetime,
-            highTemperature: data.high_temp,
+            highTemperature: data.max_temp,
             lowTemperature: data.low_temp,
-            weather: data.weather.description
-          })
-        })
-      })
+            weather: data.weather.description,
+          });
+        });
+      });
+      getPixabayURL('/pixabayURL').then((data) => {
+        exposePixabayData(data).then((data) => {
+          pixabayData('/pixabay', {
+            imageURL: data.webformatURL,
+          });
+        });
+      });
+      userInterface();
     } else {
       //alert('Check your inputs');
       console.log('Failed');
