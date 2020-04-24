@@ -1,5 +1,6 @@
 const userInterface = async () => {
   const tripDate = new Date(document.getElementById('date').value);
+  const returnDate = new Date(document.getElementById('r-date').value);
   const destination = document.querySelector('#destination').value;
   const response = await fetch('/all');
   try {
@@ -17,8 +18,11 @@ const userInterface = async () => {
       </div>
       <div class="result__data">
         <p class="bold">You are going to:<span> ${HTMLdata.weatherData.cityName}, ${HTMLdata.weatherData.countryName}</span></p>
-        <p class="bold">you are departing in: ${tripDate.getDate()}</p>
-        <input type="button" value="Save trip" class="btn">
+        <p class="bold">you are departing in: ${tripDate.getDate()}/${tripDate.getMonth()+1}/${tripDate.getFullYear()}</p>
+        <p class="bold">your trip period is : ${Math.ceil(
+          Math.abs(returnDate - tripDate) / (1000 * 60 * 60 * 24)
+        )} days</p>
+        <hr>
         <input type="button" value="Delete trip" class="btn btn-last">
         <p>your destination is ${Math.ceil(
           Math.abs(tripDate - new Date()) / (1000 * 60 * 60 * 24)
