@@ -17,7 +17,7 @@ You will be building a travel application. The project will include a simple for
 
 ## Development Strategy
 
-#### 1. Get webpack set up to work with this project.
+### 1. Get webpack set up to work with this project.
 
 - Create your `src` folder first. The `src` folder should contain a client folder and a server folder.
 - Your server folder should contain your `server.js` content.
@@ -35,7 +35,7 @@ You will be building a travel application. The project will include a simple for
 - What information needs to get?
 - We want to get the latitude, longitude, country.
 
-#####Note:
+###Note:
 
 > - The geoname api outputs multiple objects. How do we call the first object?
 
@@ -53,7 +53,7 @@ You will be building a travel application. The project will include a simple for
 
 ### 5.Choose one of the items from the suggested list to add in
 
-##### I choose to add this optional item
+### I choose to add this optional item
 
 1. Add end date and display length of trip.
 

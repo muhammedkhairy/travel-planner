@@ -13,6 +13,12 @@ module.exports = merge(common, {
   devServer: {
     proxy: {
       //to run with node server
+      '/all': 'http://localhost:3000',
+      '/geoNamesData': 'http://localhost:3000',
+      '/weatherURL': 'http://localhost:3000',
+      '/pixabayURL': 'http://localhost:3000',
+      '/weatherbit': 'http://localhost:3000',
+      '/pixabay': 'http://localhost:3000',
     },
   },
 });
