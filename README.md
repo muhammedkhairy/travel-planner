@@ -39,12 +39,6 @@ You will be building a travel application. The project will include a simple for
 
 ### Note:
 
-=======
-
-### Note:
-
-> > > > > > > 10c3d6c561a11fc1205732e88939b7054393b8b4
-
 > - The geoname api outputs multiple objects. How do we call the first object?
 
 ### 3. Create an account with [Weatherbit](https://www.weatherbit.io/account/create)
