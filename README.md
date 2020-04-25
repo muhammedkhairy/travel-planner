@@ -35,8 +35,6 @@ You will be building a travel application. The project will include a simple for
 - What information needs to get?
 - We want to get the latitude, longitude, country.
 
-<<<<<<< HEAD
-
 ### Note:
 
 > - The geoname api outputs multiple objects. How do we call the first object?
