@@ -53,24 +53,9 @@ You will be building a travel application. The project will include a simple for
 
 ### 5.Choose one of the items from the suggested list to add in
 
-##### you must choose at least 1, all others are optional
+##### I choose to add this optional item
 
 1. Add end date and display length of trip.
-2. Pull in an image for the country from Pixabay API when the entered location brings up no results (good for obscure localities).
-3. Allow user to add multiple destinations on the same trip.
-   - Pull in weather for additional locations.
-4. Allow the user to add hotel and/or flight data.
-   - Multiple places to stay? Multiple flights?
-5. Integrate the REST Countries API to pull in data for the country being visited.
-6. Allow the user to remove the trip.
-7. Use Local Storage to save the data so that when they close, then revisit the page, their information is still there.
-8. Instead of just pulling a single day forecast, pull the forecast for multiple days.
-9. Incorporate icons into forecast.
-10. Allow user to Print their trip and/or export to PDF.
-11. Allow the user to add a todo list and/or packing list for their trip.
-12. Allow the user to add additional trips (this may take some heavy reworking, but is worth the challenge).
-    - Automatically sort additional trips by countdown.
-    - Move expired trips to bottom/have their style change so it’s clear it’s expired.
 
 ### 6.Add in services workers
 

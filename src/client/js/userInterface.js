@@ -17,19 +17,26 @@ const userInterface = async () => {
         <a href= "https://en.wikipedia.org/wiki/${destination}"class="btn" target="_blank">Check your destination</a>
       </div>
       <div class="result__data">
-        <p class="bold">You are going to:<span> ${HTMLdata.weatherData.cityName}, ${HTMLdata.weatherData.countryName}</span></p>
-        <p class="bold">you are departing in: ${tripDate.getDate()}/${tripDate.getMonth()+1}/${tripDate.getFullYear()}</p>
+        <p class="bold">You are going to:<span> ${
+          HTMLdata.weatherData.cityName
+        }, ${HTMLdata.weatherData.countryName}</span></p>
+        <p class="bold">you are departing in: ${tripDate.getDate()}/${
+      tripDate.getMonth() + 1
+    }/${tripDate.getFullYear()}</p>
         <p class="bold">your trip period is : ${Math.ceil(
           Math.abs(returnDate - tripDate) / (1000 * 60 * 60 * 24)
         )} days</p>
         <hr>
-        <input type="button" value="Delete trip" class="btn btn-last">
         <p>your destination is ${Math.ceil(
           Math.abs(tripDate - new Date()) / (1000 * 60 * 60 * 24)
         )} days away from today </p>
         <p>Typical weather for this time is: 
-          <div class="weather_data"> High: ${HTMLdata.weatherInfo.highTemperature}, Low: ${HTMLdata.weatherInfo.lowTemperature}</div> 
-          <div class="weather_data">${HTMLdata.weatherInfo.weather} through out this day.</div>
+          <div class="weather_data"> High: ${
+            HTMLdata.weatherInfo.highTemperature
+          }, Low: ${HTMLdata.weatherInfo.lowTemperature}</div> 
+          <div class="weather_data">${
+            HTMLdata.weatherInfo.weather
+          } through out this day.</div>
         </p>
       </div>
     </div>

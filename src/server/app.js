@@ -1,6 +1,6 @@
-weatherData = {}; // to hold geoNames data
-weatherInfo = {}; // to hold info from weather bit
-pixabayLink = {}; //hold info from pixabay
+let weatherData = {}; // to hold geoNames data
+let weatherInfo = {}; // to hold info from weather bit
+let pixabayLink = {}; //hold info from pixabay
 
 const express = require('express');
 const path = require('path');
